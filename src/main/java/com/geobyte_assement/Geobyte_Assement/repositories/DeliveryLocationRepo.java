@@ -9,5 +9,5 @@ public interface DeliveryLocationRepo extends JpaRepository<DeliveryLocation, Lo
     boolean existsByNameIgnoreCase(String name);
 
     @Override
-    void deleteById(Long aLong);
+    void deleteById(Long id);
 }

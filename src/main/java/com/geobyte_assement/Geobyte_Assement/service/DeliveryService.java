@@ -14,7 +14,7 @@ public interface DeliveryService   {
 
 
     void addLocation(AddLocationDto dto);
-    DeliveryLocation removeLocation(long id);
+    void removeLocation(long id);
 
     List<DeliveryLocation> viewLocations();
     DeliveryLocation updateDeliveryLocation(DeliveryLocation location) ;

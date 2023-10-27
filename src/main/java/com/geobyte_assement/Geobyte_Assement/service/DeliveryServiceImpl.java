@@ -40,9 +40,8 @@ public class DeliveryServiceImpl implements DeliveryService {
         user.setEmail(dto.getEmail());
         user.setPassword(dto.getPassword());
         userRepo.save(user);
-
-
         return user;
+
     }
 
     @Override
@@ -56,10 +55,10 @@ public class DeliveryServiceImpl implements DeliveryService {
     }
 
     @Override
-    public DeliveryLocation removeLocation(long id) {
-        deliveryLocationRepo.deleteById(id);
+    public void removeLocation(long id) {
+        DeliveryLocation deliveryLocation= getLocation(id);
+        deliveryLocationRepo.deleteById(deliveryLocation.getId());
 
-        return null;
     }
 
     @Override

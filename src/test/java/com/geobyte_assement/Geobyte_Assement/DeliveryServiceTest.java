@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -77,9 +78,10 @@ public class DeliveryServiceTest {
 
     @Test
     void testThatDeleteLocation() {
-        long locationId = 4;
+        long locationId =2;
         deliveryLocationRepo.deleteById(locationId);
-        assertThat(locationId).isNotNull();
+
+        assertThat(locationId).isEqualTo(2);
 
     }
 
